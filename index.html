@@ -1,30 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Oscar Jaulin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      max-width: 800px; 
-      margin: 40px auto; 
-      padding: 0 20px;
-      line-height: 1.6;
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
     }
-    h1 { margin-bottom: 0; }
-    nav a { margin-right: 15px; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #ffffff;
+      padding: 24px;
+      width: 280px;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+
+    .title {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0 0 12px 0;
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .contact a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+
+    .nav {
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      margin-right: 18px;
+      text-decoration: none;
+      color: #0056b3;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+    }
+
+    .profile-text {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      max-width: 750px;
+    }
+
+    /* Responsive: stack sidebar on top for small screens */
+    @media (max-width: 800px) {
+      .page {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<h1>Oscar Jaulin, PhD Candidate in Economics</h1>
-<p>Welcome to my academic webpage. More content coming soon!</p>
+<div class="page">
 
-<nav>
-  <a href="cv.html">CV</a>
-  <a href="research.html">Research</a>
-</nav>
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <!-- Replace "photo.jpg" with your real file name -->
+    <img src="photo.jpg" alt="Photo of Oscar Jaulin" class="photo">
+
+    <h2 class="name">Oscar Jaulin</h2>
+    <p class="title">PhD Candidate in Economics</p>
+
+    <div class="contact">
+      <div><strong>Email:</strong> <a href="mailto:your.email@university.edu">your.email@university.edu</a></div>
+      <div><strong>Affiliation:</strong> Your Department, Your University</div>
+      <div><strong>Office:</strong> Room 123, Some Building</div>
+      <div><strong>SSRN / Scholar:</strong> <a href="#" target="_blank">Profile link</a></div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+      <!-- add Teaching, Contact, etc. later if you want -->
+    </nav>
+
+    <h1>About Me</h1>
+
+    <div class="profile-text">
+      <p>
+        I am a PhD candidate in Economics at [Your University]. 
+        My research interests include [field 1], [field 2], and [field 3]. 
+        I am particularly interested in [1–2 sentences about your main research question or agenda].
+      </p>
+      <p>
+        Before starting my PhD, I completed my [previous degree] at [institution]. 
+        In my current work, I combine [methods: e.g. microeconometrics, structural models, experiments] 
+        to study [short description]. 
+      </p>
+      <p>
+        On this website you can find information about my ongoing research projects, my CV, and 
+        how to contact me.
+      </p>
+    </div>
+  </main>
+
+</div>
 
 </body>
 </html>
